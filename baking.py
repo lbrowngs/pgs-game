@@ -6,8 +6,9 @@ name = player.sayName()
 conf = confidence(name)
 
 # BAKING AISLE
+
 # FLOUR HOARDING SCENARIO
-print(f"As {name} heads to the flour section there is a sign that reads '1 bag per customer'. As {name} enters the aisle, {name} is shocked to see it almost completely empty. But behold, tucked in the corner of the middle shelf, is a lone bag of flour.  As {name} goes to grab it, they notice a man, who barely has a mask over his mouth, reaching for the bag. {name} notices this flour hoarding man already has 3 bags of flour in his cart.")
+print(f"As {name} heads to the flour section there is a sign that reads '1 bag per customer'. As {name} enters the aisle, {name} is shocked to see it almost completely empty. But behold, tucked in the corner of the middle shelf, is a lone bag of flour.  As {name} goes to grab it, they notice a man, who barely has a mask over his mouth, reaching for the bag. {name} notices this man already has 3 bags of flour in his cart.")
 flourChoice = input("What should they do? A: Grab the flour bag and run! B: Confront the flour hoarder. C: Grab the flour bag and alert an employee to the hoarding. : ")
 flourChoice = flourChoice.upper()
 

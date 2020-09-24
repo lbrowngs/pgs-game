@@ -10,9 +10,9 @@ continueChoice = input("Shall we continue? \nA: Yes \nB: No \nAnswer: ")
 continueChoice = continueChoice.upper()
 
 if continueChoice == "A":
-    print("You have chosen wisely, go face your fears!")
+    print(f"{name} has chosen wisely, go face the fear!")
 elif continueChoice == "B":
-    print("You have chosen tasteless death. No tasty bread for you, stay home!")
+    print(f"{name} has chosen tasteless death. No tasty bread for {name}, stay home!")
     sys.exit()
 
 #item selection

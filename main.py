@@ -1,6 +1,7 @@
 import sys
 from confidence import confidence
 from baking import baking
+from produce import produce
 
 name = input("Welcome to PGS! Pandemic Grocery Shopping! \nWhat is your name?")
 conf = confidence(name)
@@ -19,7 +20,11 @@ elif continueChoice == "B":
 #item selection
 
 #baking aisle
-bakedGoods = baking(name)
+bakedGoods = baking(name, conf)
 bakedGoods.bakingAisle()
+
+#produce aisle - temp
+produceSection = produce(name, conf)
+produceSection.produceAisle()
 
 

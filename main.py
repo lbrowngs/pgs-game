@@ -1,5 +1,6 @@
 import sys
 from confidence import confidence
+from baking import baking
 
 name = input("Welcome to PGS! Pandemic Grocery Shopping! \nWhat is your name?")
 conf = confidence(name)
@@ -10,9 +11,15 @@ continueChoice = input("Shall we continue? \nA: Yes \nB: No \nAnswer: ")
 continueChoice = continueChoice.upper()
 
 if continueChoice == "A":
-    print("You have chosen wisely, go face your fears!")
+    print(f"You have chosen wisely, go face your fears!")
 elif continueChoice == "B":
     print("You have chosen tasteless death. No tasty bread for you, stay home!")
     sys.exit()
 
 #item selection
+
+#baking aisle
+bakedGoods = baking(name)
+bakedGoods.bakingAisle()
+
+

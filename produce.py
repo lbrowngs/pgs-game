@@ -14,4 +14,3 @@ protestChoice = input("What should they do? A: Join the man's protest B: Stick u
 protestChoice = protestChoice.upper()
 
 
-

@@ -9,14 +9,14 @@ conf = confidence(name)
 
 # FLOUR HOARDING SCENARIO
 print(f"As {name} heads to the flour section there is a sign that reads '1 bag per customer'. As {name} enters the aisle, {name} is shocked to see it almost completely empty. But behold, tucked in the corner of the middle shelf, is a lone bag of flour.  As {name} goes to grab it, they notice a man, who barely has a mask over his mouth, reaching for the bag. {name} notices this man already has 3 bags of flour in his cart.")
-flourChoice = input("What should they do? A: Grab the flour bag and run! B: Confront the flour hoarder. C: Grab the flour bag and alert an employee to the hoarding. : ")
+flourChoice = input("What should they do? \nA: Grab the flour bag and run! \nB: Confront the flour hoarder. \nC: Grab the flour bag and alert an employee to the hoarding. \nAnswer: ")
 flourChoice = flourChoice.upper()
 
 if flourChoice == "A":
     print(f"{name} deftly dodges the flour hoarder and snatches the last bag of flour, fleeing before the grumpy man can confront them.")
 elif flourChoice == "B":
     print(f"{name} turns toward the flour hoarder and points out the sign that says '1 bag per customer.' The man explodes with rage and grabs the last bag of flour from the shelf, throwing it at {name}.")
-    conf.change(-11)
+    conf.change(-10)
 elif flourChoice == "C":
     print(f"{name} quickly grabs the last bag of flour and finds an employee further down the aisle. They alert the employee to the flour hoarding situation, and are thanked for their efforts.")
     conf.change(3)

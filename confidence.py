@@ -24,9 +24,9 @@ class confidence():
 
             print("Confidence is now " + str(self.value))
 
-        if (self.value == 0):
-            print("Confidence level is zero! Be careful!")
+        if (self.value == 1):
+            print("Confidence level is one! Be careful!")
 
-        if (self.value < 0):
-            print(f"Confidence has dropped below zero and {self.name} can no longer handle the stresses of grocery shopping. {self.name} runs out of the store, leaving all items behind.")
+        if (self.value <= 0):
+            print(f"Confidence has dropped to zero and {self.name} can no longer handle the stresses of grocery shopping. {self.name} runs out of the store, leaving all items behind.")
             game.over()

@@ -1,12 +1,17 @@
+import sys
 from confidence import confidence
-from personTest import person
+from baking import baking
+from produce import produce
 
-# conf = confidence()
+name = "Laura"
+conf = confidence(name)
 
-# conf.change(-4)
-# conf.change(-7)
+#baking
+bakedGoods = baking(name, conf)
+bakedGoods.bakingAisle()
 
-player = person("Laura")
+#produce aisle
+produceSection = produce(name, conf)
+produceSection.produceAisle()
 
-player.sayName()
 

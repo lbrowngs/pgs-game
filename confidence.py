@@ -1,4 +1,4 @@
-from gameOverTest import gameOver
+from gameover import gameOver
 
 game = gameOver()
 

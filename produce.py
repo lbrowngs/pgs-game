@@ -16,7 +16,8 @@ class produce():
         print(f"{name} heads over to grab some bananas.  Upon reaching the isle, {name} sees the flour-hoarding man now with his mask completely off in a shouting match with an employee. This man is now waving a fake looking document shouting that he does not need a mask!")
         protestChoice = input("What should they do? \nA: Join the man's protest \nB: Stick up for the employee \nC: Grab bananas and run away. \nAnswer: ")
         protestChoice = protestChoice.upper()
-        conf.change(-2)
+        
+        
 
 
 

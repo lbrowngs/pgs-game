@@ -11,10 +11,7 @@ continueChoice = input("Shall we continue? \nA: Yes \nB: No \nAnswer: ")
 continueChoice = continueChoice.upper()
 
 if continueChoice == "A":
-<<<<<<< HEAD
-=======
     print(f"{name} has chosen wisely, go face the fear!")
->>>>>>> 9f82614016230c21b8996c39d39689e5bae6bccd
 elif continueChoice == "B":
     print(f"{name} has chosen tasteless death. No tasty bread for {name}, stay home!")
     sys.exit()

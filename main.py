@@ -11,7 +11,7 @@ continueChoice = input("Shall we continue? \nA: Yes \nB: No \nAnswer: ")
 continueChoice = continueChoice.upper()
 
 if continueChoice == "A":
-    print(f"{name} has chosen wisely, go face the fear!")
+    print(f"{name} has chosen wisely, go face the fear of PGS!")
 elif continueChoice == "B":
     print(f"{name} has chosen tasteless death. No tasty bread for {name}, stay home!")
     sys.exit()

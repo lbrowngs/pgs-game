@@ -3,6 +3,7 @@ from confidence import confidence
 from baking import baking
 from produce import produce
 from canned import canned
+from checkout import checkout
 
 name = input("Welcome to PGS! Pandemic Grocery Shopping! \nWhat is your name?")
 conf = confidence(name)
@@ -66,21 +67,23 @@ def handSan():
 handSan()
 
 #choosing aisle
-available_aisles = set(["baking", "canned", "produce", "frozen"])
+available_aisles = set(["A. Baking", "B. Produce", "C. Canned Goods", "D. Frozen"])
 aisles_visited = set([])
 while available_aisles != aisles_visited:
-    aisles = input(f"\nChoose which aisle {name} should go next: \nA. Baking Aisle \nB. Produce Aisle \nC. Canned Goods Aisle \nD. Frozen Aisle \nE. Check-out \nAnswer: ")
+    not_visited = sorted(list(available_aisles.difference(aisles_visited)))
+    aisles_left = '\n'.join(not_visited)
+    aisles = input(f"\nChoose which aisle {name} should go next: \n{aisles_left} \nAnswer: ")
     aisles = aisles.upper()
     if aisles == "A":
         # baking aisle
         bakedGoods = baking(name, conf)
         bakedGoods.bakingAisle()
-        aisles_visited.add("baking")
+        aisles_visited.add("A. Baking")
     elif aisles == "B":
         # produce aisle
         produceSection = produce(name, conf)
         produceSection.produceAisle()
-        aisles_visited.add("produce")
+        aisles_visited.add("B. Produce")
     elif aisles == "C":
         # canned goods
         print(f"\n{name} stands at the entrance to the canned goods aisle. There's nothing on the grocery list to get from this aisle, but they can enter if they wish.")
@@ -89,15 +92,19 @@ while available_aisles != aisles_visited:
         if enter == "A":
             cannedGoods = canned(name, conf)
             cannedGoods.cannedAisle()
-            aisles_visited.add("canned")
+            aisles_visited.add("C. Canned Goods")
             special_ingredient = "special"
         elif enter == "B":
             print(f"\n{name} turns away, the shimmering, well-organized aisle of cans upon cans now behind them.")
             special_ingredient = "none"
+            aisles_visited.add("C. Canned Goods")
     elif aisles == "D":
         print("test")
-    elif aisles == "E":
-        print("test")
+        aisles_visited.add("D. Frozen")
+
+input(f"{name} has gathered all items needed and can now head to checkout.")
+checkOut = checkout(name, conf, specialItem, special_ingredient)
+checkOut.check_out()
 
 
 

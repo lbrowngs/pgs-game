@@ -65,11 +65,11 @@ def handSan():
 print(handSan())
 
 #choosing aisle
-aisles = input(f"\nChoose which aisle {name} should go next: \nA. Baking Aisle \nB. Produce Aisle \nC. Canned Goods Aisle \nD. Frozen Aisle \nE. Check-out \nAnswer: ")
-aisles = aisles.upper()
 available_aisles = set(["baking", "canned", "produce", "frozen"])
 aisles_visited = set([])
 while available_aisles != aisles_visited:
+    aisles = input(f"\nChoose which aisle {name} should go next: \nA. Baking Aisle \nB. Produce Aisle \nC. Canned Goods Aisle \nD. Frozen Aisle \nE. Check-out \nAnswer: ")
+    aisles = aisles.upper()
     if aisles == "A":
         # baking aisle
         bakedGoods = baking(name, conf)

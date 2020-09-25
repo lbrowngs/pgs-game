@@ -63,7 +63,7 @@ def handSan():
             conf.change(-2)
             break
     return n
-print(handSan())
+handSan()
 
 #choosing aisle
 available_aisles = set(["baking", "canned", "produce", "frozen"])

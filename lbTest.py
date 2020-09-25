@@ -16,7 +16,7 @@ conf = confidence(name)
 # produceSection.produceAisle()
 
 #checkout
-checkOut = checkout(name, conf, "something else", " ")
+checkOut = checkout(name, conf, "something else", "special")
 checkOut.check_out()
 
 

@@ -87,8 +87,7 @@ class checkout():
         game = gameEnd(name)
 
         if special_item == "special":
-            print("special item!! yay!!")
-            #call special win from gameover
+            game.special_win()
         else:
             input(f"The cashier finishes ringing up the items, and {name} pays and heads home. \n")
             game.win()

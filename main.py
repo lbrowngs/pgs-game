@@ -87,7 +87,7 @@ while available_aisles != aisles_visited:
         aisles_visited.add("canned")
     elif aisles == "D":
         print("test")
-    elif aisles =="E":
+    elif aisles == "E":
         print("test")
 
 

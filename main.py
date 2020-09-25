@@ -46,20 +46,20 @@ def handSan():
         userAns = input(f"\nChoose what {name} should do: \nA. Use hand-sanitizer station? \nB. Use own hand-sanitizer in front of the employee? \nC. Do nothing, walk by fast to avoid the employee. ")
         userAns = userAns.upper()
         if userAns == "A":
-            n = print(f"\nEmployee thanks {name} for using the hand-sanitizer. +1 confidence")
+            n = print(f"\nEmployee thanks {name} for using the hand-sanitizer. Confidence has increased by +1")
             conf.change(+1)
             break
         elif userAns == "B":
             n = "hand-sanitizer"
             if n == specialItem:
-                print(f"\nEmployee thanks {name} for using own hand-sanitizer. +3 confidence")
+                print(f"\nEmployee thanks {name} for using own hand-sanitizer. Confidence has increased by +3")
                 conf.change(+2)
                 break
             elif n != specialItem:
                 print(f"\n{name} does not have this item, choose again!")
                 userAns
         elif userAns == "C":
-            n = print(f"Employee's eyes frown and stare at {name} as {name} runs by. -2 confidence")
+            n = print(f"Employee's eyes frown and stare at {name} as {name} runs by. Confidence has decreased by -2")
             conf.change(-2)
             break
     return n
@@ -83,9 +83,17 @@ while available_aisles != aisles_visited:
         aisles_visited.add("produce")
     elif aisles == "C":
         # canned goods
-        cannedGoods = canned(name, conf)
-        cannedGoods.cannedAisle()
-        aisles_visited.add("canned")
+        print(f"\n{name} stands at the entrance to the canned goods aisle. There's nothing on the grocery list to get from this aisle, but they can enter if they wish.")
+        enter = input(f"\nShould {name} enter the aisle? \nA: Yes \nB: No \nAnswer: ")
+        enter = enter.upper()
+        if enter == "A":
+            cannedGoods = canned(name, conf)
+            cannedGoods.cannedAisle()
+            aisles_visited.add("canned")
+            special_ingredient = "special"
+        elif enter == "B":
+            print(f"\n{name} turns away, the shimmering, well-organized aisle of cans upon cans now behind them.")
+            special_ingredient = "none"
     elif aisles == "D":
         print("test")
     elif aisles == "E":

@@ -2,6 +2,7 @@ import sys
 from confidence import confidence
 from baking import baking
 from produce import produce
+from canned import canned
 
 name = input("Welcome to PGS! Pandemic Grocery Shopping! \nWhat is your name?")
 conf = confidence(name)
@@ -83,6 +84,7 @@ while available_aisles != aisles_visited:
     elif aisles == "C":
         # canned goods
         print("test")
+        aisles_visited.add("canned")
     elif aisles == "D":
         print("test")
     elif aisles =="E":

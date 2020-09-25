@@ -22,7 +22,7 @@ print(f"\nBefore {name} goes, here are some items {name} can take.  Choose only 
 
 def item():
     while True:
-        userItem = input("\nA: hand-sanitizer \nB: picture of dog \nC: headphones \nAnswer:")
+        userItem = input("\nA: hand-sanitizer \nB: picture of dog \nC: headphones \nAnswer: ")
         userItem = userItem.upper()
         if userItem == "A":
             x = "hand-sanitizer"
@@ -36,7 +36,37 @@ def item():
     return x
 specialItem = item()
 
-print(specialItem)
+#entrance of Covway
+print(f"\nLet's head to the grocery store! {name} takes the trusty {specialItem} and gets in the car. {name} takes a deep breath before starting the car and heading to Covway grocery store.  \n")
+print(f"{name} has arrived at Covway, as they head to the entrance, there is a hand-sanitizer station with an employee beside it. ")
+
+def handSan():
+    while True:
+        userAns = input(f"\nChoose what {name} should do: \nA. Use hand-sanitizer station? \nB. use own hand-sanitizer in front of the employee? \nC. Do nothing, walk by fast to avoid the employee. ")
+        userAns = userAns.upper()
+        if userAns == "A":
+            n = print(f"\nEmployee thanks {name} for using the hand-sanitizer. +1 confidence")
+            conf.change(+1)
+            break
+        elif userAns == "B":
+            n = "hand-sanitizer"
+            if n == specialItem:
+                print(f"\nEmployee thanks {name} for using own hand-sanitizer. +3 confidence")
+                conf.change(+2)
+                break
+            elif n != specialItem:
+                print(f"\n{name} does not have this item, choose again!")
+                userAns
+        elif userAns == "C":
+            n = print(f"Employee's eyes frown and stare at {name} as {name} runs by. -2 confidence")
+            conf.change(-2)
+            break
+    return n
+print(handSan())
+
+
+
+    
 
 #baking aisle
 # bakedGoods = baking(name, conf)

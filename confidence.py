@@ -5,6 +5,9 @@ class confidence():
     def __init__(self, name):
         self.value = 10
         self.name = name
+
+    def return_int(self):
+        return self.value
     
     def show(self):
         print("Confidence is " + str(self.value))

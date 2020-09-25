@@ -1,4 +1,3 @@
-# these first lines should be taken care of by a different file I think
 from confidence import confidence
 
 #PRODUCE AISLE

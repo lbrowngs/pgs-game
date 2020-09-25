@@ -1,11 +1,11 @@
-available = set(["1","2","3"])
+available = set(["\n1","\n2","\n3"])
 visited = set([])
 
 while available != visited:
-    remaining = available.difference(visited)
-    remaininglist = (list(remaining))
-    remainingStr = [aisle for aisle in remaininglist]
-    choice = input(f"Which aisle do you want to visit, {remainingStr}: ")
+    remaining = sorted(list(available.difference(visited)))
+    remain = ','.join(remaining)
+    print(remain)
+    choice = input(f"Which aisle do you want to visit, {remain}: ")
     if choice == "1":
         print("You are visiting aisle 1!")
         visited.add("1")

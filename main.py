@@ -83,7 +83,8 @@ while available_aisles != aisles_visited:
         aisles_visited.add("produce")
     elif aisles == "C":
         # canned goods
-        print("test")
+        cannedGoods = canned(name, conf)
+        cannedGoods.cannedAisle()
         aisles_visited.add("canned")
     elif aisles == "D":
         print("test")

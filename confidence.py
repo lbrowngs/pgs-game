@@ -1,4 +1,4 @@
-from gameover import gameOver
+from gameover import gameEnd
 
 class confidence():
 
@@ -27,5 +27,5 @@ class confidence():
 
         if (self.value <= 0):
             print(f"Confidence has dropped to zero and {self.name} can no longer handle the stresses of grocery shopping. {self.name} runs out of the store, leaving all items behind.")
-            game = gameOver(self.name)
+            game = gameEnd(self.name)
             game.over()

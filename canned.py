@@ -8,7 +8,7 @@ class canned():
         self.name = name
         self.confidence = confidence
 
-    def cannedGoods(self):
+    def cannedAisle(self):
         name = self.name
         conf = self.confidence
 
@@ -19,5 +19,5 @@ class canned():
         if enter == "A":
             input(f"test")
         elif enter == "B":
-            print("exit")
+            print(f"\n{name} does not enter.")
 

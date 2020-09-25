@@ -42,7 +42,7 @@ print(f"{name} has arrived at Covway, as they head to the entrance, there is a h
 
 def handSan():
     while True:
-        userAns = input(f"\nChoose what {name} should do: \nA. Use hand-sanitizer station? \nB. use own hand-sanitizer in front of the employee? \nC. Do nothing, walk by fast to avoid the employee. ")
+        userAns = input(f"\nChoose what {name} should do: \nA. Use hand-sanitizer station? \nB. Use own hand-sanitizer in front of the employee? \nC. Do nothing, walk by fast to avoid the employee. ")
         userAns = userAns.upper()
         if userAns == "A":
             n = print(f"\nEmployee thanks {name} for using the hand-sanitizer. +1 confidence")
@@ -64,16 +64,30 @@ def handSan():
     return n
 print(handSan())
 
+#choosing aisle
+aisles = input(f"\nChoose which aisle {name} should go next: \nA. Baking Aisle \nB. Produce Aisle \nC. Canned Goods Aisle \nD. Frozen Aisle \nE. Check-out \nAnswer: ")
+aisles = aisles.upper()
+available_aisles = set(["baking", "canned", "produce", "frozen"])
+aisles_visited = set([])
+while available_aisles != aisles_visited:
+    if aisles == "A":
+        # baking aisle
+        bakedGoods = baking(name, conf)
+        bakedGoods.bakingAisle()
+        aisles_visited.add("baking")
+    elif aisles == "B":
+        # produce aisle
+        produceSection = produce(name, conf)
+        produceSection.produceAisle()
+        aisles_visited.add("produce")
+    elif aisles == "C":
+        # canned goods
+        print("test")
+    elif aisles == "D":
+        print("test")
+    elif aisles =="E":
+        print("test")
 
 
-    
-
-#baking aisle
-# bakedGoods = baking(name, conf)
-# bakedGoods.bakingAisle()
-
-#produce aisle - temp
-# produceSection = produce(name, conf)
-# produceSection.produceAisle()
 
 

@@ -29,6 +29,7 @@ class frozen():
             conf.change(-20)
         elif red_hat == "C":
             print(f"{name} calls the employees again to deal with this horrible man. Confidence decreases by -1.")
+            conf.change(-1)
         elif red_hat == "D":
             print(f"{name} leaves the aisle with nothing. Confidence decreases by -3.")
             conf.change(-3)

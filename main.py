@@ -3,6 +3,7 @@ from confidence import confidence
 from baking import baking
 from produce import produce
 from canned import canned
+from frozen import frozen
 from checkout import checkout
 
 name = input("Welcome to PGS! Pandemic Grocery Shopping! \nWhat is your name?")
@@ -99,7 +100,8 @@ while available_aisles != aisles_visited:
             special_ingredient = "none"
             aisles_visited.add("C. Canned Goods")
     elif aisles == "D":
-        print("test")
+        frozenSection = frozen(name, conf, specialItem)
+        frozenSection.frozen_aisle()
         aisles_visited.add("D. Frozen")
 
 input(f"{name} has gathered all items needed and can now head to checkout.")

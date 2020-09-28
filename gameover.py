@@ -24,6 +24,6 @@ class gameEnd():
     
     def special_win(self):
         name = self.name
-        print(f"{name} is back at home enjoying the literal best banana bread in the world, thanks to the secret ingredient! \nWhat a magical day it is!")
+        print(f"{name} is back at home enjoying the literally the best banana bread in the world, thanks to the secret ingredient! \nWhat a magical day it is!")
         print(specialWinArt)
         sys.exit()

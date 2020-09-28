@@ -17,7 +17,7 @@ class frozen():
 
         # frozen scenario
         print(f"\n{name} arrives to the frozen section and hears loud yelling. {name} notices a man in a red hat shouting “5G is killing our kids!”.  Upon further observation {name} realizes it is the same flour hoarding, documenting faking, loud man from the previous aisles. ")
-        red_hat = input(f"\nWhat should {name} do? \nA: user headphones? \nB: confront him again! \nC: call the employees again so they can deal with him. \nD: leave aisle")
+        red_hat = input(f"\nWhat should {name} do? \nA: user headphones? \nB: confront him again! \nC: call the employees again so they can deal with him. \nD: leave aisle \nAnswer: ")
         red_hat = red_hat.upper()
         if red_hat == "A" and item == "headphones":
             print(f"{name} puts on the headphones and ignores the red hat man, avoiding the situation all together. Confidence has not changed.")

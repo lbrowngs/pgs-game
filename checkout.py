@@ -18,8 +18,8 @@ class checkout():
     
         #CHECKOUT SCENARIO
         input(f"\n{name} enters the checkout line. ")
-        input(f"When it’s their turn, the checker informs them that they can use their own bags, \nbut only if they bag their items. ")
-        input(f"Otherwise, the checker can bag the items for them in paper store bags.")
+        input(f"\nWhen it’s their turn, the checker informs them that they can use their own bags, \nbut only if they bag their items. ")
+        input(f"\nOtherwise, the checker can bag the items for them in paper store bags.")
         bagChoice = input("\nWhat should they do? \nA: Use their own bags \nB: Use the store-provided paper bags \nAnswer: ")
         bagChoice = bagChoice.upper() 
 
@@ -29,8 +29,8 @@ class checkout():
 
         if bagChoice == "A":
             input(f"\n{name} decides to use their own reusable bags, \nand starts bagging as soon as each item is scanned by the cashier.")
-            input(f"But the cashier starts scanning faster and faster, and {name} can’t quite keep up with the speed.")
-            input(f"The person waiting in line behind them is staring impatiently.")
+            input(f"\nBut the cashier starts scanning faster and faster, and {name} can’t quite keep up with the speed.")
+            input(f"\nThe person waiting in line behind them is staring impatiently.")
             speedChoice = input(f"\nShould {name} speed up their bagging? \nA: Yes \nB: No \nAnswer: ")
             speedChoice = speedChoice.upper()
 
@@ -44,7 +44,7 @@ class checkout():
             elif speedChoice == "B":
                 input(f"\n{name} wants to keep bagging at the same speed and ignore the impatient cashier and customer. \nThis will require 8 confidence – do they have enough?")
                 confVal = conf.return_int()
-                print(f"Confidence level is {confVal}")
+                print(f"\nConfidence level is {confVal}")
 
                 if confVal >= 8:
                     input(f"\n{name} feels so confident, they can ignore the impatient glances. \nThey keep bagging at the same speed and protect the bananas from being squashed by the flour.")
@@ -87,8 +87,8 @@ class checkout():
         game = gameEnd(name)
 
         if special_item == "special":
-            input(f"The cashier finishes ringing up the items, and {name} pays and heads home. \n")
+            input(f"\nThe cashier finishes ringing up the items, and {name} pays and heads home. \n")
             game.special_win()
         else:
-            input(f"The cashier finishes ringing up the items, and {name} pays and heads home. \n")
+            input(f"\nThe cashier finishes ringing up the items, and {name} pays and heads home. \n")
             game.win()

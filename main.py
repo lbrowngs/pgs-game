@@ -55,7 +55,7 @@ def handSan():
             n = "hand-sanitizer"
             if n == specialItem:
                 print(f"\nEmployee thanks {name} for using own hand-sanitizer. Confidence has increased by +3")
-                conf.change(+2)
+                conf.change(+3)
                 break
             elif n != specialItem:
                 print(f"\n{name} does not have this item, choose again!")

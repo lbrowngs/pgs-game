@@ -13,9 +13,9 @@ class baking():
         conf = self.confidence
 
         # FLOUR HOARDING SCENARIO
-        input(f"As {name} heads to the flour section there is a sign that reads '1 bag per customer'. ")
-        input(f"{name} enters the aisle and is shocked to see it almost completely empty. \nBut behold, tucked in the corner of the middle shelf, is a lone bag of flour. ")
-        input(f"As {name} goes to grab it, they notice a man, who barely has a mask over his mouth, reaching for the bag. \n{name} notices this man already has 3 bags of flour in his cart. ")
+        input(f"\nAs {name} heads to the flour section there is a sign that reads '1 bag per customer'. ")
+        input(f"\n{name} enters the aisle and is shocked to see it almost completely empty. \nBut behold, tucked in the corner of the middle shelf, is a lone bag of flour. ")
+        input(f"\nAs {name} goes to grab it, they notice a man, who barely has a mask over his mouth, reaching for the bag. \n{name} notices this man already has 3 bags of flour in his cart. ")
         flourChoice = input("\nWhat should they do? \nA: Grab the flour bag and run! \nB: Confront the flour hoarder. \nC: Grab the flour bag and alert an employee to the hoarding. \nAnswer: ")
         flourChoice = flourChoice.upper()
 
@@ -38,8 +38,8 @@ class baking():
 
         # VANILLA SCENARIO
         input(f"\n{name} now must go grab some very specific vanilla that their S.O. has strictly asked for. ")
-        input(f"As {name} approaches the vast ocean of options, they start to sweat and become nervous in searching for the climate-friendly, Madagascar-conscious, super premium vanilla.")
-        input(f"{name} starts to search but notices a person behind waiting to get vanilla themselves.")
+        input(f"\nAs {name} approaches the vast ocean of options, they start to sweat and become nervous in searching for the climate-friendly, Madagascar-conscious, super premium vanilla.")
+        input(f"\n{name} starts to search but notices a person behind waiting to get vanilla themselves.")
 
         vanChoice = input("\nWhat should they do? \nA: Grab the first vanilla they see. \nB: Keep looking and find the vanilla their S.O. asked for. \nAnswer: ")
         vanChoice = vanChoice.upper()
